@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <Header title="Task tracker" />
-        <Tasks :tasks="tasks" />
+        <Tasks @delete-task="deleteTask" :tasks="tasks" />
     </div>
 </template>
 
@@ -42,6 +42,11 @@ export default {
                 reminder: false
             }
         ]
+    },
+    methods: {
+        deleteTask(id) {
+            console.log('task', id)
+        }
     }
 }
 </script>
