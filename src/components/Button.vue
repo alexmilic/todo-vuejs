@@ -1,5 +1,6 @@
 <template>
     <button 
+        @click="onClick()"
         :style="{backgroundColor: color}"
         class="btn"
     >
@@ -18,6 +19,11 @@ export default {
         color: {
             type: String,
             color: "#ccc"
+        }
+    },
+    methods: {
+        onClick() {
+            console.log('clicked');
         }
     }
 }
