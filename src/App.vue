@@ -21,6 +21,11 @@ export default {
             tasks: []
         }
     },
+    methods: {
+        deleteTask(id) {
+            this.tasks = this.tasks.filter(task => task.id !== id);
+        }
+    },
     created() {
         this.tasks = [
             {
@@ -42,11 +47,6 @@ export default {
                 reminder: false
             }
         ]
-    },
-    methods: {
-        deleteTask(id) {
-            console.log('task', id)
-        }
     }
 }
 </script>
