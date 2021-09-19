@@ -1,9 +1,24 @@
 <template>
     <footer>
         <p>Copyrigth &copy;2021</p>
-        <router-link to='/about'>About</router-link>
+        <router-link v-show="aboutPage" to='/about'>About</router-link>
     </footer>
 </template>
+
+<script>
+    export default {
+        computed: {
+            aboutPage() {
+                if(this.$route.path !== '/about') {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+    }
+</script>
+
 
 <style scoped>
     a {
