@@ -19,7 +19,8 @@
                 default: 'Hello world'
             },
             showAddTask: {
-                type: Boolean
+                type: Boolean,
+                default: false
             }
         },
         components: {
